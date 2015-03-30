@@ -104,7 +104,7 @@ else
 fi;
 
 # DONT Set the terminal title to the current working directory.
-# PS1="\[\033]0;\w\007\]";  we will use renametab func
+export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"';  
 PS1=""
 PS1+="\[${bold}\]\n"; # newline
 PS1+="\[${userStyle}\]\u"; # username
